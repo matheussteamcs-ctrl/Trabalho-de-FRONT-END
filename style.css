@@ -1,0 +1,276 @@
+*{
+    margin: 0%;
+}
+
+.topo{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(11, 11, 146);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.topo h1{
+    color: aliceblue;
+}
+
+.proximos-jogos{
+    display: flex;
+    background-color: rgb(26, 26, 153);
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 999;
+}
+
+.grid{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 500px 400px 600px 200px;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 'menu principal' 'menu titulos' 'menu forms' 'footer footer';
+}
+
+.grid div:nth-child(1){
+    grid-area: menu;
+}
+
+.grid div:nth-child(2){
+    grid-area: principal;
+}
+
+.grid div:nth-child(3){
+    grid-area: titulos;
+}
+
+.grid div:nth-child(4){
+    grid-area: forms;
+}
+
+.grid div:nth-child(5){
+    grid-area: footer;
+}
+
+.titulo-tabela{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: rgb(209, 206, 18);
+}
+
+.tabela{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.tabela th,
+.tabela td{
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+}
+
+.tabela th{
+    background-color: rgb(11,11,146);
+    color: white;
+}
+
+.tabela tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.tabela tr:nth-child(odd){
+    background-color: white;
+}
+
+.menu {
+    background-color: rgb(11, 11, 146);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 20px;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.titulos{
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.titulos div{
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+
+    background-color: rgb(11,11,146);
+
+    background-size: 200% 200%;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+
+    color: rgb(209, 206, 18);
+
+    transition: 0.4s;
+}
+
+.titulos div:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+}
+
+
+.menu li{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.menu li:hover{
+    background-color: rgba(26, 59, 248, 0.7);
+    letter-spacing: 2px;
+}
+
+.menu ul{
+    width: 100%;
+    padding: 0 0 0 5;
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    gap: 30px;
+    list-style: none;
+}
+
+.rodape{
+    background: linear-gradient(120deg,
+        #071a52,
+        #0a2a7a,
+        #114a9c
+    );
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-form{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: rgb(209, 206, 18);
+}
+
+.formulario{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="date"],
+.formulario select{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.formulario button{
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(11,11,146);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario button:hover{
+    background-color: rgb(26,26,153);
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+@keyframes fundoTabela {
+    0% {
+        background-color: #071a52; 
+    }
+
+    50% {
+        background-color: #114a9c;
+    }
+
+    100% {
+        background-color: #0c3ee4; 
+    }
+}
+
+.principal{
+    animation: fundoTabela 6s infinite alternate;
+}
+
+.forms{
+    animation: fundoTabela 6s infinite alternate;
+}
+
+.footer{
+    background-color: rgb(11,11,146);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.estrelas{
+    font-size: 30px;
+    color: gold;
+    margin-top: 15px;
+}
+
+.estrelas{
+    display: inline-block;
+    font-size: 30px;
+    color: gold;
+    margin-top: 15px;
+
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.estrelas:hover{
+    transform: scale(2.0) rotate(20deg);
+    cursor: pointer;
+    color: orange; 
+}
